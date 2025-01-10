@@ -10,12 +10,14 @@ SORCES = main.c \
 
 HELPERS = helpers/ft_atoi.c \
 			helpers/ft_putstr_fd.c \
-			helpers/ft_strlen.c
+			helpers/ft_strlen.c \
+			helpers/ft_calloc.c \
+			helpers/ft_bzero.c
 OBJS := $(SORCES:.c=.o)
 HELPERS_OBJS := $(HELPERS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -pthread 
-CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
+# CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
 
 all: $(NAME)
 

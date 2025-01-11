@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 23:03:27 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 15:38:49 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/10 17:21:34 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <unistd.h>
-
-// typedef struct args
-// {
-
-// }   t_args;
 
 typedef struct s_philo
 {

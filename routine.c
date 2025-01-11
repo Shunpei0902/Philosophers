@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:53:39 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 16:54:54 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/11 16:09:45 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,5 @@ void	*routine(void *arguments)
 	philo->last_eat_time = get_time();
 	while (!action_eat(philo))
 		;
-	// release_fork(philo);
 	return (NULL);
 }

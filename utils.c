@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:13:46 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 16:52:51 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/10 17:21:12 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	finish_simu(t_philo *philos, pthread_t *threads)
 	return (0);
 }
 
-// ミリ秒単位で取得
 int	get_time(void)
 {
 	struct timeval	time;

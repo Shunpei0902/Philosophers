@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 19:17:22 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 19:00:08 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 13:41:42 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,18 +90,10 @@ t_philo	*init_philos(int argc, char *argv[])
 	while (++i < ft_atoi(argv[1]))
 	{
 		set_args(philos, i, argc, argv);
-		if (i % 2 == 0)
-		{
-			philos[i].first_take_fork = i;
-			philos[i].second_take_fork = i - 1;
-			if (i == 0)
-				philos[i].second_take_fork = philos->num_of_philosophers - 1;
-		}
-		else
-		{
-			philos[i].first_take_fork = i - 1;
-			philos[i].second_take_fork = i;
-		}
+		philos[i].first_take_fork = i - 1;
+		philos[i].second_take_fork = i;
+		if (i == 0)
+			philos[i].first_take_fork = philos->num_of_philosophers - 1;
 	}
 	return (philos);
 }

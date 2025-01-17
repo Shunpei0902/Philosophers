@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:13:46 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/17 11:25:43 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 11:45:52 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	free_philos(t_philo *philos)
 		pthread_mutex_destroy(&(philos->fork_mutexs[i]));
 	free(philos->forks);
 	free(philos->fork_mutexs);
+	free(philos->simu_state);
 	free(philos->state_mutex);
 	free(philos);
 }

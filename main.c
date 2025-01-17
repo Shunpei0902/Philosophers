@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 23:02:46 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/17 11:28:05 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 14:16:46 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	start_routine(t_philo *philos, pthread_t *threads)
 	{
 		if (pthread_create(&threads[i], NULL, routine, (void *)&philos[i]))
 			return (1);
-		usleep(10);
+		usleep(100);
 	}
 	return (0);
 }

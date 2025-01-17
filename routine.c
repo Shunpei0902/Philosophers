@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:53:39 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/17 11:28:11 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 14:16:40 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	*routine(void *arguments)
 
 	philo = (t_philo *)arguments;
 	if (philo->philo_id % 2)
-		usleep(200);
+		usleep(3000);
 	philo->last_eat_time = get_time();
 	while (!action_eat(philo))
 		;

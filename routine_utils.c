@@ -6,16 +6,16 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:31:30 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 17:04:11 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 10:47:17 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-int	take_fork(t_philo *philo)
+void	take_fork(t_philo *philo)
 {
 	if (*(philo->simu_state) == 0)
-		return (0);
+		return ;
 	pthread_mutex_lock(&philo->fork_mutexs[philo->first_take_fork]);
 	if (philo->forks[philo->first_take_fork])
 	{
@@ -25,7 +25,7 @@ int	take_fork(t_philo *philo)
 	}
 	pthread_mutex_unlock(&philo->fork_mutexs[philo->first_take_fork]);
 	if (philo->num_of_philosophers == 1)
-		return (philo->take_forks);
+		return ;
 	pthread_mutex_lock(&philo->fork_mutexs[philo->second_take_fork]);
 	if (philo->forks[philo->second_take_fork])
 	{
@@ -34,7 +34,7 @@ int	take_fork(t_philo *philo)
 		philo->take_forks++;
 	}
 	pthread_mutex_unlock(&philo->fork_mutexs[philo->second_take_fork]);
-	return (philo->take_forks);
+	return ;
 }
 
 void	release_fork(t_philo *philo)
@@ -52,7 +52,7 @@ void	check_die(t_philo *philo)
 {
 	if (get_time() - philo->time_to_die > philo->last_eat_time)
 	{
-		ft_log(get_time(), "dead", philo);
+		ft_log(get_time(), "died", philo);
 		pthread_mutex_lock(philo->state_mutex);
 		*(philo->simu_state) = 0;
 		pthread_mutex_unlock(philo->state_mutex);

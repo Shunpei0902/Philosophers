@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 23:03:27 by sasano            #+#    #+#             */
-/*   Updated: 2025/01/10 17:21:34 by sasano           ###   ########.fr       */
+/*   Updated: 2025/01/17 10:33:21 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_philo				*init_philos(int argc, char *argv[]);
 int					init_forks(t_philo *philos);
 int					init_simu_state(t_philo *philos);
 void				*routine(void *arguments);
-int					take_fork(t_philo *philo);
+void				take_fork(t_philo *philo);
 void				release_fork(t_philo *philo);
 void				check_die(t_philo *philo);
 int					get_time(void);
